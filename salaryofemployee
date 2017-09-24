@@ -1,0 +1,53 @@
+package component;
+
+import javax.swing.JOptionPane;
+
+public class salaryconfiguringapp
+{
+	public static void main (String args[])
+	{                  String shour1, sminute1, shour2, sminute2,shourlyrate, result="";
+                       
+                           double hour1, hour2, minute1, minute2, hourdif, mindif, hourlyrate, salary, sum=0;	
+                          
+                          //Asking the client to enter the time in military system
+                           
+		         JOptionPane.showMessageDialog(null, "NOTE:Kindly enter the time in the military system");
+             
+                        // Accepting inputs
+                
+             shour1=JOptionPane.showInputDialog ("Enter the hour of starting",JOptionPane.QUESTION_MESSAGE);        
+             hour1=Double.parseDouble(shour1);
+             
+             sminute1=JOptionPane.showInputDialog ("Enter the minute of starting",JOptionPane.QUESTION_MESSAGE);        
+             minute1=Double.parseDouble(sminute1);
+             
+             shour2=JOptionPane.showInputDialog ("Enter the hour of end",JOptionPane.QUESTION_MESSAGE);        
+             hour2=Double.parseDouble(shour2);
+             
+             sminute2=JOptionPane.showInputDialog ("Enter the minute of end",JOptionPane.QUESTION_MESSAGE);        
+             minute2=Double.parseDouble(sminute2);
+             
+             shourlyrate=JOptionPane.showInputDialog ("Enter the hourly rate");
+             hourlyrate=Double.parseDouble(shourlyrate);
+             
+                  /** First of all we find the difference in between the hours
+                  secondly we multiply the hours with sixty to change into minutes
+                  third, we find the difference between the minutes aand then add the hourdif and mindif */
+                     
+             hourdif=(hour2-hour1)*60;
+             mindif=minute2-minute1;
+             
+             sum+=hourdif+mindif;
+             
+                   //  Multilying the hourly rate with calculations done above
+             
+             salary=(sum/60)*hourlyrate;
+             
+             result= "The salary for the employee is"+ salary;
+             
+                  //  Printing the result on screen
+             
+     JOptionPane.showMessageDialog(null, result, "Salary for employee", JOptionPane.INFORMATION_MESSAGE);
+
+         }
+}

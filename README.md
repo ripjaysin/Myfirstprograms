@@ -1,2 +1,2 @@
 # Myfirstprograms
-these are first programs in Java
+These are my first programs in Java
